@@ -1,0 +1,144 @@
+
+
+----------==========----------==========----------==========----------
+
+
+"Eat Your Own Catfood."
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2020/09/30
+
+
+BUGFIX
+
+
+	win32/win/set.c
+		n_win_set() : regression : size and position
+			OLD : inaccurate
+			NEW : fixed
+			[x] : NEW_FEATURE @ 2020/09/20
+
+	Nekomimi Nina
+		Walk-On-Lift : when flowy effect
+			OLD : enable when rising
+			NEW : fixed
+
+
+NEW_FEATURE
+
+
+	win32/win/set.c
+		n_win_set_patch()
+			NEW : removed
+			[?] : not needed
+		n_win_minsize_proc()
+			NEW : AdjustWindowRect() based
+			[!] : simpler than older
+
+	Nonnon Paint
+		hamburger button : Grabber
+			NEW : inputtable
+			[!] : you can start selection from hamberger button
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2020/09/20
+
+
+BUGFIX
+
+
+	win32/win/set.c
+		n_win_minsize_proc_patch() : 64-bit Version : 96 DPI : patch
+			OLD :     used
+			NEW : not used
+		n_win_set_patch()
+			OLD :     used
+			NEW : not used
+
+	nmidi
+		config : channels
+			OLD : zero is settable
+			NEW : fixed
+	Nonnon Paint
+		Multi-Layer : middle button click
+			OLD : layer focus is not set
+			NEW : fixed
+		on load
+			OLD : too many redraw count
+			NEW : fixed
+
+
+NEW_FEATURE
+
+
+	win32/win/set.c
+		n_win_set() : calculation pipeline
+			OLD : GetSystemMetrics() based
+			NEW : AdjustWindowRect() based
+
+	Nonnon Paint
+		Resizer : "Cel Art x2"
+			NEW : faster in some cases
+			[!] : for multi-layer
+		Drop2Save : when partially selected by grabber
+			OLD : whole bitmap will be saved
+			NEW : error dialog will appear
+		Resizer : Color Option : "Reverse"
+			NEW : output RGB reversed bitmap
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2020/09/10
+
+
+BUGFIX
+
+
+	win32/win_iconbutton.c
+		text renderer : on DWM : animation is ON
+			OLD : not supported
+			NEW :     supported
+			[!] : BPBF_TOPDOWNDIB is needed
+
+	CatPad
+		Win8 or later : toolband : when resized
+			OLD : black margin will appear
+			NEW : fixed
+			[!] : Windows' bug
+	Felis
+		Win8 or later : toolband : when resized
+			OLD : black margin will appear
+			NEW : fixed
+			[!] : Windows' bug
+	nmidi
+		combobox
+			OLD : window titlebar loses active state
+			NEW : fixed
+
+
+NEW_FEATURE
+
+
+	win32/*.c
+		NEW : some controls support DWM
+
+
+----------==========----------==========----------==========----------
+
